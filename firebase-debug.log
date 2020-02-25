@@ -1,0 +1,22 @@
+[debug] [2020-02-25T17:10:21.406Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T17:10:21.409Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2020-02-25T17:10:21.410Z] CLI Version:   7.13.1
+[debug] [2020-02-25T17:10:21.410Z] Platform:      darwin
+[debug] [2020-02-25T17:10:21.410Z] Node Version:  v12.16.1
+[debug] [2020-02-25T17:10:21.411Z] Time:          Tue Feb 25 2020 12:10:21 GMT-0500 (GMT-05:00)
+[debug] [2020-02-25T17:10:21.412Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T17:10:21.412Z] 
+[debug] [2020-02-25T17:10:21.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-25T17:10:21.430Z] > authorizing via signed-in user
+[debug] [2020-02-25T17:10:21.431Z] [iam] checking project chatapp-139e8 for permissions ["firebase.projects.get"]
+[debug] [2020-02-25T17:10:21.432Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-139e8:testIamPermissions  
+
+[debug] [2020-02-25T17:10:21.795Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-25T17:10:21.798Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8  
+ 
+[debug] [2020-02-25T17:10:22.053Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-25T17:10:22.056Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8/webApps/-/config  
+ 
+[debug] [2020-02-25T17:10:22.571Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./public
+[info] ✔  hosting: Local server: http://localhost:5000
