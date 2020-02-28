@@ -52,7 +52,9 @@ function isUserSignedIn() {
 // Saves a new message on the Cloud Firestore.
 function saveMessage(messageText) {
   // Add a new message entry to the Firebase database.
-  return firebase.firestore().collection('messages').add({
+//  return firebase.firestore().collection('messages').add({
+  
+  return firebase.firestore().collection('messages').doc(roomIDElement.value).collection('msg').add({
     name: getUserName(),
     text: messageText,
     profilePicUrl: getProfilePicUrl(),
@@ -65,8 +67,27 @@ function saveMessage(messageText) {
 // Loads chat messages history and listens for upcoming ones.
 function loadMessages() {
   // Create the query to load the last 12 messages and listen for new ones.
-  var query = firebase.firestore().collection('messages').orderBy('timestamp', 'desc').limit(12);
-  
+  //var query = firebase.firestore().collection('messages').orderBy('timestamp', 'desc').limit(12);
+  //roomIDElement.value
+  var query = firebase.firestore().collection('messages').doc('1').collection('msg');
+
+  // Start listening to the query.
+  query.onSnapshot(function(snapshot) {
+    snapshot.docChanges().forEach(function(change) {
+      if (change.type === 'removed') {
+        deleteMessage(change.doc.id);
+      } else {
+        var message = change.doc.data();
+        displayMessage(change.doc.id, message.timestamp, message.name,
+                      message.text, message.profilePicUrl, message.imageUrl);
+      }
+    });
+  });
+}
+function loadChatRooms()
+{
+  var query = firebase.firestore().collection('messages').doc('1').collection('msg');
+
   // Start listening to the query.
   query.onSnapshot(function(snapshot) {
     snapshot.docChanges().forEach(function(change) {
@@ -348,8 +369,16 @@ function checkSetup() {
 checkSetup();
 
 // Shortcuts to DOM Elements.
+
+var roomChatsElement = document.getElementById('roomChats');
+
 var messageListElement = document.getElementById('messages');
 var messageFormElement = document.getElementById('message-form');
+
+var roomchangeElememt = document.getElementById('roomIDButton');
+
+var roomIDElement = document.getElementById('roomID');
+
 var messageInputElement = document.getElementById('message');
 var submitButtonElement = document.getElementById('submit');
 var imageButtonElement = document.getElementById('submitImage');
@@ -365,6 +394,12 @@ var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
+
+roomchangeElememt.addEventListener('click',changeroom);
+
+function changeroom(){
+  window.location.href = "chooseroom.html";
+} 
 
 // Toggle for the button.
 messageInputElement.addEventListener('keyup', toggleButton);
@@ -385,3 +420,10 @@ firebase.performance();
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
+
+
+
+
+
+const app = new TaskController(new TaskModel(), new TaskView())
+

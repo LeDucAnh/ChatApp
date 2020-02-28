@@ -1,22 +1,78 @@
-[debug] [2020-02-25T17:10:21.406Z] ----------------------------------------------------------------------
-[debug] [2020-02-25T17:10:21.409Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
-[debug] [2020-02-25T17:10:21.410Z] CLI Version:   7.13.1
-[debug] [2020-02-25T17:10:21.410Z] Platform:      darwin
-[debug] [2020-02-25T17:10:21.410Z] Node Version:  v12.16.1
-[debug] [2020-02-25T17:10:21.411Z] Time:          Tue Feb 25 2020 12:10:21 GMT-0500 (GMT-05:00)
-[debug] [2020-02-25T17:10:21.412Z] ----------------------------------------------------------------------
-[debug] [2020-02-25T17:10:21.412Z] 
-[debug] [2020-02-25T17:10:21.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-02-25T17:10:21.430Z] > authorizing via signed-in user
-[debug] [2020-02-25T17:10:21.431Z] [iam] checking project chatapp-139e8 for permissions ["firebase.projects.get"]
-[debug] [2020-02-25T17:10:21.432Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-139e8:testIamPermissions  
+[debug] [2020-02-26T04:46:17.695Z] ----------------------------------------------------------------------
+[debug] [2020-02-26T04:46:17.696Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2020-02-26T04:46:17.696Z] CLI Version:   7.13.1
+[debug] [2020-02-26T04:46:17.697Z] Platform:      darwin
+[debug] [2020-02-26T04:46:17.697Z] Node Version:  v12.16.1
+[debug] [2020-02-26T04:46:17.698Z] Time:          Tue Feb 25 2020 23:46:17 GMT-0500 (GMT-05:00)
+[debug] [2020-02-26T04:46:17.698Z] ----------------------------------------------------------------------
+[debug] [2020-02-26T04:46:17.698Z] 
+[debug] [2020-02-26T04:46:17.706Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-26T04:46:17.706Z] > authorizing via signed-in user
+[debug] [2020-02-26T04:46:17.706Z] [iam] checking project chatapp-139e8 for permissions ["firebase.projects.get"]
+[debug] [2020-02-26T04:46:17.707Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-139e8:testIamPermissions  
 
-[debug] [2020-02-25T17:10:21.795Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-25T17:10:21.798Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8  
+[debug] [2020-02-26T04:46:18.132Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-26T04:46:18.134Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8  
  
-[debug] [2020-02-25T17:10:22.053Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-25T17:10:22.056Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8/webApps/-/config  
+[debug] [2020-02-26T04:46:18.507Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-26T04:46:18.509Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8/webApps/-/config  
  
-[debug] [2020-02-25T17:10:22.571Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-26T04:46:18.991Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./public
 [info] ✔  hosting: Local server: http://localhost:5000
+[warn] ⚠  hosting: Could not load Firebase SDK firebase-performance.js v7.9.1, check your internet connection.
+[debug] [2020-02-26T04:47:52.139Z] Error: getaddrinfo ENOTFOUND www.gstatic.com
+[debug] [2020-02-27T17:58:11.314Z] ----------------------------------------------------------------------
+[debug] [2020-02-27T17:58:11.316Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2020-02-27T17:58:11.316Z] CLI Version:   7.13.1
+[debug] [2020-02-27T17:58:11.316Z] Platform:      darwin
+[debug] [2020-02-27T17:58:11.316Z] Node Version:  v12.16.1
+[debug] [2020-02-27T17:58:11.321Z] Time:          Thu Feb 27 2020 12:58:11 GMT-0500 (GMT-05:00)
+[debug] [2020-02-27T17:58:11.321Z] ----------------------------------------------------------------------
+[debug] [2020-02-27T17:58:11.322Z] 
+[debug] [2020-02-27T17:58:11.372Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-27T17:58:11.373Z] > authorizing via signed-in user
+[debug] [2020-02-27T17:58:11.373Z] [iam] checking project chatapp-139e8 for permissions ["firebase.projects.get"]
+[debug] [2020-02-27T17:58:11.374Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-27T17:58:11.374Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-27T17:58:11.591Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T17:58:11.602Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-139e8:testIamPermissions  
+
+[debug] [2020-02-27T17:58:11.927Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T17:58:11.929Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8  
+ 
+[debug] [2020-02-27T17:58:12.214Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T17:58:12.217Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8/webApps/-/config  
+ 
+[debug] [2020-02-27T17:58:12.769Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-27T21:08:13.996Z] ----------------------------------------------------------------------
+[debug] [2020-02-27T21:08:13.998Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2020-02-27T21:08:13.998Z] CLI Version:   7.13.1
+[debug] [2020-02-27T21:08:13.998Z] Platform:      darwin
+[debug] [2020-02-27T21:08:13.998Z] Node Version:  v12.16.1
+[debug] [2020-02-27T21:08:14.004Z] Time:          Thu Feb 27 2020 16:08:13 GMT-0500 (GMT-05:00)
+[debug] [2020-02-27T21:08:14.005Z] ----------------------------------------------------------------------
+[debug] [2020-02-27T21:08:14.005Z] 
+[debug] [2020-02-27T21:08:14.015Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-27T21:08:14.015Z] > authorizing via signed-in user
+[debug] [2020-02-27T21:08:14.016Z] [iam] checking project chatapp-139e8 for permissions ["firebase.projects.get"]
+[debug] [2020-02-27T21:08:14.017Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-27T21:08:14.017Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-27T21:08:14.214Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T21:08:14.227Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-139e8:testIamPermissions  
+
+[debug] [2020-02-27T21:08:14.597Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T21:08:14.599Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8  
+ 
+[debug] [2020-02-27T21:08:14.877Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-27T21:08:14.880Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/chatapp-139e8/webApps/-/config  
+ 
+[debug] [2020-02-27T21:08:15.925Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./public
+[info] ✔  hosting: Local server: http://localhost:5000
+[warn] ⚠  hosting: Could not load Firebase SDK firebase-firestore.js v7.9.1, check your internet connection.
+[debug] [2020-02-27T23:18:01.099Z] Error: getaddrinfo ENOTFOUND www.gstatic.com

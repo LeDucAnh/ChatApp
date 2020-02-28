@@ -53,8 +53,12 @@
   <script type="text/javascript">!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);</script>
 </head>
 <body>
-<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
+
+
+
+
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header" id="root" >
   <!-- Header section containing logo -->
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
@@ -75,6 +79,21 @@
   </header>
 
   <main class="mdl-layout__content mdl-color--grey-100">
+    <div id="messages-roomID-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="roomID" autocomplete="off">
+        <label class="mdl-textfield__label" for="message">roomID...</label>
+     
+        
+        
+        <input type="button" id="roomIDButton" value="create page" onclick="change_page()"/>
+      </div>
+      
+    </div>
+
+    <div id="roomChats">
+    </div>
     <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
 
       <!-- Messages container -->
@@ -87,6 +106,7 @@
               <input class="mdl-textfield__input" type="text" id="message" autocomplete="off">
               <label class="mdl-textfield__label" for="message">Message...</label>
             </div>
+          
             <button id="submit" disabled type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
               Send
             </button>
@@ -122,8 +142,19 @@
 <script src="/__/firebase/7.9.1/firebase-performance.js"></script>
 <script src="/__/firebase/init.js"></script>
 
+<script  type="text/javascript" src="scripts/TaskController.js" ></script>
+
+
+<script type="text/javascript" src="scripts/TaskModel.js"></script>
+
+<script type="text/javascript" src="scripts/TaskView.js"></script>
+
 
 
 <script src="scripts/main.js"></script>
 </body>
 </html>
+
+
+
+
